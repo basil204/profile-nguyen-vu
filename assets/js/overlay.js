@@ -7,6 +7,6 @@ window.addEventListener('DOMContentLoaded', function() {
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
       overlay.style.visibility = 'hidden';
-    }, 2200);
+    }, 4200);
   }
 });
