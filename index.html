@@ -7,37 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="color-picker-container">
-      <label style="margin-right:10px;font-size:1.05rem;font-weight:600;">Theme color:</label>
-      <div class="color-picker-group">
-        <span class="color-picker-label">Main</span>
-        <input type="color" id="theme-main-picker" class="theme-color-input" value="#e29bbf">
-      </div>
-      <div class="color-picker-group">
-        <span class="color-picker-label">Secondary</span>
-        <input type="color" id="theme-secondary-picker" class="theme-color-input" value="#f8cee1">
-      </div>
-    </div>
-    <div class="app-container" role="main" aria-label="User profile interface">
     <header>
-      <div class="header-left">
-        <button aria-label="Go back" class="icon-button" id="btn-back">
-          <span class="material-icons">arrow_back</span>
-        </button>
-      </div>
       <div class="header-title" aria-live="polite">Profile</div>
-      <div class="header-right">
-        <button aria-label="More options" class="icon-button" id="btn-options">
-          <span class="material-icons">more_vert</span>
-        </button>
-      </div>
     </header>
+    <div class="app-container" role="main" aria-label="User profile interface">
 
     <section class="profile-header-bg" aria-label="Profile header background with user photo and info">
       <div class="profile-photo-container" role="img" aria-label="User profile photo of Nick Frost smiling with pink background">
-        <img src="https://i.ibb.co/dCtYPTV/z6716425265649-edd43679d47fb7b77cecb311a1661642.jpg" alt="Portrait of Nick Frost smiling wearing white t-shirt on pink background" />
+        <img src="./avt.jpg" alt="Portrait of Nick Frost smiling wearing white t-shirt on pink background" />
       </div>
       <h1 class="profile-name">Nguyễn Mạnh Vũ</h1>
       <div class="profile-role" aria-label="User role and location">
@@ -47,7 +27,7 @@
       </div>
       <nav class="social-icons" aria-label="User social media links">
         <a href="#" class="social-icon social-dribbble" aria-label="Dribbble profile">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"></svg>
             <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="white" stroke-width="2"></path>
             <path d="M18.77 7.12C16.88 9.06 14.75 10.56 12.84 11.49C14.39 14.1 16.4 16.23 18.77 17.74C19.4 16.91 19.95 16.04 20.42 15.16C18.3 13.92 16.22 12.56 14.14 11.19C14.72 9.85 15.22 8.47 15.67 7.07C17.24 6.81 18.71 6.91 20.1 7.22C19.43 7.31 19.07 7.42 18.77 7.12Z" fill="white"></path>
           </svg>
@@ -79,7 +59,8 @@
 
     <nav class="tabs-nav" role="tablist" aria-label="Profile sections navigation" style="overflow-x: auto;">
       <div class="tabs-scroll-inner" style="display: flex; min-width: 100%;">
-        <button class="tab active" role="tab" aria-selected="true" aria-controls="experience-panel" id="experience-tab">Experience</button>
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="about-panel" id="about-tab">Introduce</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="experience-panel" id="experience-tab">Experience</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="skills-panel" id="skills-tab">Skills</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="projects-panel" id="projects-tab">Projects</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="contact-panel" id="contact-tab">Contact</button>
@@ -87,7 +68,30 @@
       </div>
     </nav>
 
-    <section class="cards-container" id="experience-panel" role="tabpanel" aria-labelledby="experience-tab">
+    <section class="cards-container visually-hidden" id="about-panel" role="tabpanel" aria-labelledby="about-tab">
+      <h2 style="text-align:center;">About Me</h2>
+      <div class="about-content">
+        <img src="./avt.jpg" alt="Profile" class="about-avatar">
+        <div class="about-text">
+          <p><strong>Xin chào! Tôi là Nguyễn Mạnh Vũ</strong></p>
+          <p>Tôi là Marketing Director với hơn 10 năm kinh nghiệm trong lĩnh vực truyền thông, xây dựng thương hiệu và phát triển chiến lược số. Tôi đam mê sáng tạo, thích làm việc với con người và luôn hướng tới giá trị bền vững cho doanh nghiệp.</p>
+          <ul>
+            <li>Chuyên môn: Digital Marketing, Branding, Content Strategy</li>
+            <li>Kỹ năng: Lãnh đạo, giao tiếp, tư duy chiến lược</li>
+            <li>Sở thích: Đọc sách, du lịch, nhiếp ảnh</li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-ggi-box">
+        <h3>Về chúng tôi</h3>
+        <p>Chúng tôi tạo ra GGI với sứ mệnh kết nối phát triển công nghiệp, mang đến các sản phẩm, dịch vụ bất động sản công nghiệp chất lượng cao, linh hoạt, đáp ứng nhu cầu đa dạng của khách hàng.</p>
+        <div class="about-ggi-video">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/1La4QzGeaaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-container visually-hidden" id="experience-panel" role="tabpanel" aria-labelledby="experience-tab">
       <article class="experience-card">
         <div class="exp-logo">
           <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/33995d92-bdb6-401d-9f05-490b1a410e51.png" alt="Google logo" />
@@ -173,23 +177,76 @@
     </section>
     <section class="cards-container visually-hidden" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab">
       <h2 style="text-align:center;">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=128&h=96" alt="Portfolio Website">
-          <div class="project-title">Portfolio Website</div>
-          <div class="project-year">2023</div>
+      <div class="projects-list">
+        <div class="project-slider-card">
+          <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 3">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 4">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 5">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 6">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Portfolio Website 7">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-status status-done">Completed</div>
+          </div>
         </div>
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=facearea&w=128&h=96" alt="Mobile Banking App UI">
-          <div class="project-title">Mobile Banking App UI</div>
-          <div class="project-year">2024</div>
+        <div class="project-slider-card">
+          <div id="carouselProject2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Banking App 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Banking App 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Banking App 3">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=facearea&w=400&h=240" class="d-block w-100" alt="Banking App 4">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="project-info">
+            <div class="project-title">Mobile Banking App UI</div>
+            <div class="project-status status-progress">In Progress</div>
+          </div>
         </div>
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=128&h=96" alt="Food Delivery Dashboard">
-          <div class="project-title">Food Delivery Dashboard</div>
-          <div class="project-year">2022</div>
-        </div>
-        <div class="project-card empty"></div>
       </div>
     </section>
     <section class="cards-container visually-hidden" id="contact-panel" role="tabpanel" aria-labelledby="contact-tab">
@@ -253,8 +310,20 @@
     </section>
 
   </div>
+    <footer>
+      <button class="footer-btn active" aria-label="Go to Home" type="button">
+        <span class="material-icons" aria-hidden="true">home</span>
+        <span class="btn-label">Home</span>
+      </button>
 
+      <button class="footer-btn" aria-label="Notifications" type="button">
+        <span class="material-icons" aria-hidden="true">notifications</span>
+        <span class="btn-label">Alerts</span>
+      </button>
+
+    </footer>
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
