@@ -26,27 +26,61 @@
 .experience-card, .project-slider-card, .about-ggi-box, .skill-item, .contact-item, .award-item {
   /* Add specific card styles and comments for each type below */
 }
-.experience-card {
+.experience-card, .skill-item {
   border: 2px dashed #019E4B;
-  border-radius: 18px;
+  border-radius: 16px;
   background: #f8fff9;
   padding: 16px 18px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
   display: flex;
   align-items: center;
   gap: 16px;
+  min-height: 72px;
 }
-.skill-item {
-  border: 2px dashed #019E4B;
-  border-radius: 16px;
-  background: #f8fff9;
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+/* Icon/logo đồng bộ kích thước và căn giữa */
+.experience-card .exp-logo, .skill-item .skill-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(1,158,75,0.08);
+  margin-right: 10px;
+}
+.experience-card .exp-logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.skill-item .skill-icon {
+  font-size: 2rem;
+  color: #019E4B;
+  background: #fff;
+}
+/* Thông tin bên phải đồng bộ style */
+.experience-card .exp-info, .skill-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.experience-card .exp-company, .skill-label {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #019E4B;
+  margin-bottom: 2px;
+}
+.experience-card .exp-role-duration, .skill-desc {
+  font-size: 0.98rem;
+  color: #333;
+  font-weight: 400;
+  opacity: 0.92;
 }
 .projects-list {
   margin-top: 12px;

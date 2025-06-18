@@ -175,6 +175,7 @@
     <section class="cards-container visually-hidden" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab">
       <!-- <h2 class="skills-title">Projects</h2> -->
       <div class="projects-list">
+        <h2 class="skills-title">Projects</h2>
         <div class="project-slider-card">
           <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -354,11 +355,23 @@
     quickBtn.onclick = () => quickModal.style.display = 'flex';
     closeQuick.onclick = () => quickModal.style.display = 'none';
     window.onclick = (e) => { if(e.target === quickModal) quickModal.style.display = 'none'; };
-    document.getElementById('quick-message-form').onsubmit = function(e) {
+    document.getElementById('quick-message-form').onsubmit = async function(e) {
       e.preventDefault();
-      alert('Tin nhắn của bạn đã được gửi!');
-      quickModal.style.display = 'none';
-      this.reset();
+      const name = this.name.value;
+      const email = this.email.value;
+      const message = this.message.value;
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbyv4iUrOZre6LeUgs_mwxacXnbjf6AQaXnw_k51Ji0wdWOPhsiGwY8vwbBBtf55Z8mgnw/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+        alert('Tin nhắn của bạn đã được gửi!');
+        quickModal.style.display = 'none';
+        this.reset();
+      } catch (err) {
+        alert('Gửi thất bại, vui lòng thử lại!');
+      }
     };
   }
 })();
@@ -372,6 +385,7 @@
   }
 })();
 </script>
+<script src="assets/js/popup-avt.js"></script>
 </body>
 </html>
 
