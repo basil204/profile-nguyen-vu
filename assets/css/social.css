@@ -1,0 +1,46 @@
+/* social.css - Social icon styles for Facebook, Zalo, Telegram, Instagram, WeChat */
+
+.social-icons {
+  margin: 10px 0 6px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  margin: 0 2px;
+}
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  filter: none;
+}
+.social-facebook {
+  background: #1877f2;
+}
+.social-zalo {
+  background: #018fe5;
+}
+.social-telegram {
+  background: #229ed9;
+}
+.social-instagram {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-wechat {
+  background: #7bb32e;
+}
+.social-icon:hover {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16);
+  filter: brightness(1.08);
+}

@@ -1,0 +1,28 @@
+/* cards.css - Styles for cards, experience, projects, skills, contact, awards, about-ggi-box */
+
+.cards-container {
+  background: linear-gradient(180deg, rgba(1,158,75,0.15) 0%, rgba(0,103,145,0.15) 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.cards-container.active-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  z-index: 2;
+}
+.cards-container.slide-in-up {
+  animation: slideInUp 0.5s cubic-bezier(.4,0,.2,1);
+}
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(60px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.experience-card, .project-slider-card, .about-ggi-box, .skill-item, .contact-item, .award-item {
+  /* Add specific card styles and comments for each type below */
+}

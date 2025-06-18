@@ -186,31 +186,42 @@ body, .app-container, header, .profile-header-bg, .cards-container, .experience-
   gap: 14px;
 }
 .social-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #e0e0e0;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
   cursor: pointer;
   user-select: none;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  margin: 0 2px;
 }
-.social-icon:hover {
-  background-color: #cfcfcf;
-}
-.social-dribbble {
-  background: #ea4c89;
-  color: #fff;
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  filter: none;
 }
 .social-facebook {
   background: #1877f2;
-  color: #fff;
 }
-.social-behance {
-  background: #1769ff;
-  color: #fff;
+.social-zalo {
+  background: #018fe5;
+}
+.social-telegram {
+  background: #229ed9;
+}
+.social-instagram {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-wechat {
+  background: #7bb32e;
+}
+.social-icon:hover {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16);
+  filter: brightness(1.08);
 }
 .social-more {
   font-size: 14px;
@@ -249,7 +260,11 @@ hr.divider {
   font-size: 0.95rem;
   gap: 8px;
   user-select: none;
-  margin: 0 16px 12px;
+  margin: 18px 16px 18px;
+  padding: 12px 0 12px 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
 }
 .tabs-nav::-webkit-scrollbar {
   display: none;
@@ -261,7 +276,7 @@ hr.divider {
 }
 .tab {
   flex: 0 0 auto;
-  padding: 10px 24px;
+  padding: 12px 28px;
   border-radius: 24px;
   cursor: pointer;
   white-space: nowrap;
@@ -269,6 +284,7 @@ hr.divider {
   transition: background-color 0.22s, box-shadow 0.25s;
   user-select: none;
   margin-right: 8px;
+  font-size: 1.05rem;
 }
 .tab:last-child {
   margin-right: 0;
@@ -277,9 +293,20 @@ hr.divider {
   background-color: #f0edf7;
 }
 .tab.active {
-  background-color: var(--theme-main, #019E4B);
+  background-color: #019E4B;
   color: #fff;
   box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+}
+@media (max-width: 600px) {
+  .tabs-nav {
+    margin: 10px 2vw 10px 2vw;
+    padding: 8px 0 8px 0;
+    border-radius: 10px;
+  }
+  .tab {
+    padding: 10px 16px;
+    font-size: 0.98rem;
+  }
 }
 
 .cards-container {
@@ -381,8 +408,8 @@ hr.divider {
 footer {
   position: sticky;
   bottom: 0;
-  background: #111;
-  padding: 6px 12px;
+  background: linear-gradient(90deg, #019E4B 0%, #006791 100%);
+  padding: 6px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -390,9 +417,23 @@ footer {
   box-shadow: 0 -3px 6px rgb(0 0 0 / 0.45);
   user-select: none;
   z-index: 20;
+  width: 100vw;
+  min-width: 0;
+  max-width: 100vw;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  footer {
+    height: 48px;
+    padding: 6px 0;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    border-radius: 0;
+  }
 }
 .footer-btn {
-  color: #bbb;
+  color: #fff;
   font-size: 28px;
   display: flex;
   flex-direction: column;
@@ -407,17 +448,7 @@ footer {
 }
 .footer-btn.active,
 .footer-btn:hover {
-  color: var(--theme-main, #019E4B);
-}
-.footer-btn .material-icons {
-  font-size: 28px;
-  line-height: 1;
-}
-.footer-btn .btn-label {
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1;
-  user-select: none;
+  color: #ffe;
 }
 
 .visually-hidden {

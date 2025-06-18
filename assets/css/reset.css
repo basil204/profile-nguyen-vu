@@ -1,0 +1,29 @@
+/* reset.css - Reset & base styles for the project */
+
+/* Box sizing and font smoothing */
+* {
+  box-sizing: border-box; /* Ensure all elements use border-box */
+}
+body {
+  font-family: 'Inter', sans-serif; /* Main font */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+:root {
+  --theme-main: #019E4B; /* Main brand color */
+  --theme-secondary: #006791; /* Secondary brand color */
+}

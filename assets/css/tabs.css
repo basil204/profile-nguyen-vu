@@ -1,0 +1,49 @@
+/* tabs.css - Styles for tab navigation and tab items */
+
+.tabs-nav {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-bottom: 2.5px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  gap: 8px;
+  user-select: none;
+  margin: 18px 16px 18px;
+  padding: 12px 0 12px 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+}
+.tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+.tabs-scroll-inner {
+  display: flex;
+  min-width: 440px;
+  width: max-content;
+}
+.tab {
+  flex: 0 0 auto;
+  padding: 12px 28px;
+  border-radius: 24px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #333;
+  transition: background-color 0.22s, box-shadow 0.25s;
+  user-select: none;
+  margin-right: 8px;
+  font-size: 1.05rem;
+}
+.tab:last-child {
+  margin-right: 0;
+}
+.tab:hover:not(.active) {
+  background-color: #f0edf7;
+}
+.tab.active {
+  background-color: #019E4B;
+  color: #fff;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+}
