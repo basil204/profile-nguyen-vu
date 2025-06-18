@@ -1,7 +1,18 @@
 // fab-group.js - Xử lý nút nổi gộp 3 chức năng: gửi tin nhắn, Messenger, gọi điện
 document.addEventListener('DOMContentLoaded', function() {
-  const fabMain = document.querySelector('.fab-main');
-  const fabActions = document.querySelector('.fab-actions');
+  var fabMain = document.querySelector('.fab-main .material-icons');
+  if (fabMain) {
+    fabMain.textContent = 'add';
+  }
+  // Hiện luôn 3 nút khi load trang
+  var fabActions = document.querySelector('.fab-actions');
+  var fabMainIcon = document.querySelector('.fab-main .material-icons');
+  if (fabActions) {
+    fabActions.style.display = 'flex';
+  }
+  if (fabMainIcon) {
+    fabMainIcon.textContent = 'close';
+  }
   const fabMail = document.getElementById('fab-mail');
   const fabMess = document.getElementById('fab-mess');
   const fabCall = document.getElementById('fab-call');
