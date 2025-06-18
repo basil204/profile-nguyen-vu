@@ -334,8 +334,8 @@
 <div id="welcome-overlay" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.98);transition:opacity 0.7s cubic-bezier(.4,0,.2,1);">
   <img src="./Artboard-1.png" alt="GGI Logo" style="width:220px;height:auto;animation:welcomeLogoPop 1.2s cubic-bezier(.4,0,.2,1);">
 </div>
-<!-- Nút nổi gộp: 1 nút floating-action mở 3 lựa chọn: Gửi tin nhắn, Messenger, Gọi điện -->
-<div class="fab-group">
+<!-- FAB group đặt dưới overlay -->
+<div class="fab-group" style="z-index: 9989;">
   <button class="fab-main" type="button" aria-label="Mở các lựa chọn liên hệ">
     <span class="material-icons">add</span>
   </button>
