@@ -26,3 +26,172 @@
 .experience-card, .project-slider-card, .about-ggi-box, .skill-item, .contact-item, .award-item {
   /* Add specific card styles and comments for each type below */
 }
+.experience-card {
+  border: 2px dashed #019E4B;
+  border-radius: 18px;
+  background: #f8fff9;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.skill-item {
+  border: 2px dashed #019E4B;
+  border-radius: 16px;
+  background: #f8fff9;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.projects-list {
+  margin-top: 12px;
+}
+.project-slider-card {
+  border: 2px dashed #019E4B;
+  border-radius: 18px;
+  background: #f8fff9;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+}
+.project-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #019E4B;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.quick-message-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  transition: opacity 0.3s;
+}
+.quick-message-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(1,158,75,0.18);
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 94vw;
+  position: relative;
+  animation: slideInUp 0.4s cubic-bezier(.4,0,.2,1);
+}
+.quick-message-content h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #019E4B;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+.close-quick-message {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 1.7rem;
+  color: #019E4B;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.close-quick-message:hover {
+  color: #006791;
+}
+#quick-message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+#quick-message-form input,
+#quick-message-form textarea {
+  border: 1.5px solid #b6e2c6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fff9;
+}
+#quick-message-form input:focus,
+#quick-message-form textarea:focus {
+  border: 1.5px solid #019E4B;
+}
+#quick-message-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+#quick-message-form button[type="submit"] {
+  background: linear-gradient(90deg, #019E4B 0%, #006791 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+#quick-message-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #006791 0%, #019E4B 100%);
+}
+.quick-message-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9998;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #019E4B 0%, #006791 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 18px 0 rgba(1,158,75,0.18);
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  outline: none;
+}
+.quick-message-btn .material-icons {
+  font-size: 22px;
+}
+.quick-message-btn:hover {
+  background: linear-gradient(135deg, #006791 0%, #019E4B 100%);
+  box-shadow: 0 8px 24px 0 rgba(1,158,75,0.22);
+  transform: scale(1.08);
+}
+@media (max-width: 480px) {
+  .quick-message-content {
+    min-width: 90vw;
+    padding: 18px 6vw 18px 6vw;
+  }
+}
+@media (max-width: 600px) {
+  .quick-message-btn {
+    right: 8px;
+    bottom: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .quick-message-btn .material-icons {
+    font-size: 18px;
+  }
+}

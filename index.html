@@ -65,7 +65,7 @@
     </nav>
 
     <section class="cards-container visually-hidden" id="about-panel" role="tabpanel" aria-labelledby="about-tab">
-      <h2 style="text-align:center;">About Me</h2>
+<h2 class="skills-title">About Me</h2>
       <div class="about-content">
         <img src="./avt.jpg" alt="Profile" class="about-avatar">
         <div class="about-text">
@@ -88,6 +88,7 @@
     </section>
 
     <section class="cards-container visually-hidden" id="experience-panel" role="tabpanel" aria-labelledby="experience-tab">
+            <h2 class="skills-title">Experience</h2>
       <article class="experience-card">
         <div class="exp-logo">
           <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/33995d92-bdb6-401d-9f05-490b1a410e51.png" alt="Google logo" />
@@ -172,7 +173,7 @@
       </div>
     </section>
     <section class="cards-container visually-hidden" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab">
-      <h2 style="text-align:center;">Projects</h2>
+      <!-- <h2 class="skills-title">Projects</h2> -->
       <div class="projects-list">
         <div class="project-slider-card">
           <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
@@ -323,6 +324,42 @@
 <div id="welcome-overlay" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.98);transition:opacity 0.7s cubic-bezier(.4,0,.2,1);">
   <img src="./Artboard-1.png" alt="GGI Logo" style="width:220px;height:auto;animation:welcomeLogoPop 1.2s cubic-bezier(.4,0,.2,1);">
 </div>
+<!-- Nút nổi Send instant messages (chỉ 1 nút, ngoài contact-list) -->
+<button class="quick-message-btn" type="button" aria-label="Send instant messages">
+  <span class="material-icons" style="font-size:28px;">mail_outline</span>
+</button>
+<!-- Popup Send instant messages -->
+<div id="quick-message-modal" class="quick-message-modal" style="display:none;">
+  <div class="quick-message-content">
+    <span class="close-quick-message">&times;</span>
+    <h3>Send instant messages</h3>
+    <form id="quick-message-form">
+      <input type="text" name="name" placeholder="Tên của bạn" required />
+      <input type="email" name="email" placeholder="Email của bạn" required />
+      <textarea name="message" placeholder="Nội dung" required></textarea>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+</div>
+<script>
+// Đảm bảo chỉ có 1 nút nổi, gắn sự kiện đúng
+(function() {
+  const quickBtn = document.querySelector('.quick-message-btn');
+  const quickModal = document.getElementById('quick-message-modal');
+  const closeQuick = document.querySelector('.close-quick-message');
+  if(quickBtn && quickModal && closeQuick) {
+    quickBtn.onclick = () => quickModal.style.display = 'flex';
+    closeQuick.onclick = () => quickModal.style.display = 'none';
+    window.onclick = (e) => { if(e.target === quickModal) quickModal.style.display = 'none'; };
+    document.getElementById('quick-message-form').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Tin nhắn của bạn đã được gửi!');
+      quickModal.style.display = 'none';
+      this.reset();
+    };
+  }
+})();
+</script>
 </body>
 </html>
 

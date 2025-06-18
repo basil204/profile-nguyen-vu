@@ -47,3 +47,20 @@
   font-size: 16px;
   color: #999;
 }
+.about-content {
+  border: 2px dashed #019E4B;
+  border-radius: 18px;
+  background: #f8fff9;
+  padding: 18px 18px 14px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+}
+
+.about-ggi-box {
+  border: 2px dashed #019E4B;
+  border-radius: 18px;
+  background: #f8fff9;
+  padding: 18px 18px 14px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+}
