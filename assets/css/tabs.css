@@ -10,11 +10,13 @@
   font-size: 0.95rem;
   gap: 8px;
   user-select: none;
-  margin: 18px 16px 18px;
-  padding: 12px 0 12px 0;
+  margin: 28px 16px 28px 16px; /* Tăng khoảng cách trên dưới mặc định */
+  padding: 16px 0 16px 0;      /* Tăng padding trên dưới cho tabs-nav */
   background: rgba(255,255,255,0.85);
   border-radius: 16px;
   box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
+  position: relative;
+  z-index: 2; /* Đảm bảo các phần khác không đè lên */
 }
 .tabs-nav::-webkit-scrollbar {
   display: none;
