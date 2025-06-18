@@ -38,4 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
       window.open('https://m.me/ggindustries.vn', '_blank');
     };
   }
+  // Đóng popup khi click nút đóng hoặc click ra ngoài
+  document.addEventListener('click', function(e) {
+    const quickModal = document.getElementById('quick-message-modal');
+    if (!quickModal) return;
+    const closeBtn = quickModal.querySelector('.close-quick-message');
+    if (closeBtn && (e.target === closeBtn || (e.target === quickModal && quickModal.style.display === 'flex'))) {
+      quickModal.style.display = 'none';
+    }
+  });
 });
