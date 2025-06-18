@@ -64,3 +64,96 @@
   margin-bottom: 18px;
   box-shadow: 0 2px 8px 0 rgba(1,158,75,0.06);
 }
+
+/* Fancy hotline bar với icon động */
+.fancy-hotline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0 0 0;
+  font-family: inherit;
+}
+.hotline-anim-icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotline-circle {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #e53935;
+  animation: hotline-ring 1.2s infinite cubic-bezier(.4,0,.2,1);
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+.hotline-circle-fill {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e53935;
+  opacity: 0.18;
+  left: 7px; top: 7px;
+  animation: hotline-pulse 1.2s infinite cubic-bezier(.4,0,.2,1);
+}
+.hotline-phone {
+  position: relative;
+  color: #fff;
+  background: #e53935;
+  border-radius: 50%;
+  font-size: 1.5em;
+  z-index: 2;
+  padding: 7px;
+  box-shadow: 0 2px 8px #e5393533;
+  animation: hotline-shake 1.2s infinite cubic-bezier(.4,0,.2,1);
+}
+.hotline-label {
+  font-weight: 600;
+  color: #e53935;
+  font-size: 1.08em;
+  letter-spacing: 0.5px;
+}
+.hotline-number {
+  color: #019E4B;
+  font-weight: 700;
+  font-size: 1.08em;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.hotline-number:hover {
+  color: #e53935;
+}
+@keyframes hotline-ring {
+  0% { transform: scale(1); opacity: 0.7; }
+  80% { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+@keyframes hotline-pulse {
+  0% { opacity: 0.18; }
+  50% { opacity: 0.32; }
+  100% { opacity: 0.18; }
+}
+@keyframes hotline-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-18deg); }
+  20% { transform: rotate(18deg); }
+  30% { transform: rotate(-12deg); }
+  40% { transform: rotate(12deg); }
+  50% { transform: rotate(-6deg); }
+  60% { transform: rotate(6deg); }
+  70% { transform: rotate(0deg); }
+}
+@media (max-width: 600px) {
+  .fancy-hotline { gap: 7px; }
+  .hotline-anim-icon { width: 30px; height: 30px; }
+  .hotline-circle { width: 30px; height: 30px; }
+  .hotline-circle-fill { width: 18px; height: 18px; left: 6px; top: 6px; }
+  .hotline-phone { font-size: 1.1em; padding: 4px; }
+  .hotline-label, .hotline-number { font-size: 1em; }
+}
