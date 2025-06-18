@@ -328,6 +328,9 @@
 <button class="quick-message-btn" type="button" aria-label="Send instant messages">
   <span class="material-icons" style="font-size:28px;">mail_outline</span>
 </button>
+<button class="quick-message-btn-mess" type="button" aria-label="Send Facebook Messenger">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Facebook_Messenger_logo_2025.svg" alt="Messenger" style="width:32px;height:32px;filter:drop-shadow(0 2px 6px #00C6FF);">
+</button>
 <!-- Popup Send instant messages -->
 <div id="quick-message-modal" class="quick-message-modal" style="display:none;">
   <div class="quick-message-content">
@@ -356,6 +359,15 @@
       alert('Tin nhắn của bạn đã được gửi!');
       quickModal.style.display = 'none';
       this.reset();
+    };
+  }
+})();
+// Nút Messenger nổi mở link Messenger
+(function() {
+  const btnMess = document.querySelector('.quick-message-btn-mess');
+  if(btnMess) {
+    btnMess.onclick = function() {
+      window.open('https://m.me/ggindustries.vn', '_blank');
     };
   }
 })();

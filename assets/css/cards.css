@@ -153,14 +153,14 @@
   right: 18px;
   bottom: 18px;
   z-index: 9998;
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, #019E4B 0%, #006791 100%);
   color: #fff;
   border: none;
   box-shadow: 0 4px 18px 0 rgba(1,158,75,0.18);
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -170,11 +170,40 @@
   outline: none;
 }
 .quick-message-btn .material-icons {
-  font-size: 22px;
+  font-size: 32px;
 }
 .quick-message-btn:hover {
   background: linear-gradient(135deg, #006791 0%, #019E4B 100%);
   box-shadow: 0 8px 24px 0 rgba(1,158,75,0.22);
+  transform: scale(1.08);
+}
+.quick-message-btn-mess {
+  position: fixed;
+  right: 18px;
+  bottom: 88px;
+  z-index: 9998;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0078FF 0%, #00C6FF 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 18px 0 rgba(0,120,255,0.18);
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  outline: none;
+}
+.quick-message-btn-mess .material-icons {
+  font-size: 32px;
+}
+.quick-message-btn-mess:hover {
+  background: linear-gradient(135deg, #00C6FF 0%, #0078FF 100%);
+  box-shadow: 0 8px 24px 0 rgba(0,120,255,0.22);
   transform: scale(1.08);
 }
 @media (max-width: 480px) {
@@ -187,11 +216,21 @@
   .quick-message-btn {
     right: 8px;
     bottom: 8px;
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
   }
   .quick-message-btn .material-icons {
-    font-size: 18px;
+    font-size: 22px;
+  }
+  .quick-message-btn-mess {
+    right: 8px;
+    bottom: 64px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  .quick-message-btn-mess .material-icons {
+    font-size: 22px;
   }
 }
