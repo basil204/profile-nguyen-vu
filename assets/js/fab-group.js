@@ -24,8 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
       fabMain.querySelector('.material-icons').textContent = isOpen ? 'add' : 'close';
     };
     // Ẩn khi click ra ngoài
-    document.addEventListener('click', function(e) {
-      if (!fabMain.contains(e.target) && !fabActions.contains(e.target)) {
+     document.addEventListener('click', function(e) {
+      if (
+        !fabMain.contains(e.target) &&
+        !fabActions.contains(e.target) &&
+        !(e.target.classList && e.target.classList.contains('tab'))
+      ) {
         fabActions.style.display = 'none';
         fabMain.querySelector('.material-icons').textContent = 'add';
       }

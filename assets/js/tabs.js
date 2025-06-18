@@ -34,6 +34,12 @@
         panel.classList.remove("visually-hidden");
         setTimeout(() => panel.classList.add("active-panel", "slide-in-up"), 10);
       }
+      // Không ẩn fab-actions khi chuyển tab nếu đang mở
+      var fabActions = document.querySelector('.fab-actions');
+      var fabMainIcon = document.querySelector('.fab-main .material-icons');
+      if (fabActions && fabActions.style.display === 'flex') {
+        fabMainIcon.textContent = 'close';
+      }
     });
   });
   // Thêm drag-to-scroll cho tabs-nav trên desktop
